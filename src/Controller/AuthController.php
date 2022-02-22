@@ -23,11 +23,7 @@ class AuthController extends AbstractController
      */
     public function login(JWTTokenManagerInterface $jwt, UserRepository $userRepo, UserPasswordHasherInterface $encoder, Request $request): Response
     {
-        $response = [
-            'status' => false,
-            'message' => '',
-            'token' => '',
-        ];
+        $response = [];
 
         $parameter = json_decode($request->getContent(), true);
 
@@ -43,7 +39,6 @@ class AuthController extends AbstractController
         else if ($user->getNivel() != 1) {
             $response['message'] = 'Apenas administradores podem acessar a api';
         } else {
-            $response['status'] = true;
             $response['message'] = 'Logado!';
             $response['token'] = $jwt->create($user);
         }
@@ -55,10 +50,7 @@ class AuthController extends AbstractController
      */
     public function register(Request $request, UserPasswordHasherInterface $encoder, ManagerRegistry $registry): Response
     {
-        $response = [
-            'status' => false,
-            'message' => '',
-        ];
+        $response = [];
 
         $parameter = json_decode($request->getContent(), true);
 
@@ -82,7 +74,6 @@ class AuthController extends AbstractController
             $registry->getManager()->persist($user);
             $registry->getManager()->flush();
 
-            $response['status'] = true;
             $response['message'] = sprintf('Usuário %s criado com sucesso!', $user->getUsername());
 
             return $this->json($response);

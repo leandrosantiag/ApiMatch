@@ -119,19 +119,11 @@ class MatriculasController extends AbstractController
     public function matriculas_update($matriculaId, Request $request, ManagerRegistry $doctrine): Response
     {
 
-        
         $data = json_decode($request->getContent(), true);
-
         $matricula = $doctrine->getRepository(Matriculas::class)->find($matriculaId);
 
-        if ($data['nome']) : $matricula->setTitulo($data['nome']);
-        endif;
-        if ($data['email']) : $matricula->setDescricao($data['email']);
-        endif;
-        if ($data['data_nascimento']) : $matricula->setDataInicio(\DateTime::createFromFormat('Y-m-d', $data['data_nascimento']));
-        endif;
-        if ($data['status']) : $matricula->setStatus($data['status']);
-        endif;
+        if ($data['curso']) : $matricula->setCursoid($data['curso']); endif;
+        if ($data['aluno']) : $matricula->setAlunoid($data['aluno']); endif;
 
         $manager = $doctrine->getManager();
         $manager->flush();
