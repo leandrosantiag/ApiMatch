@@ -16,5 +16,5 @@ Faça uma cópia do projeto e execute o container usando com os comandos abaixo.
 ```
 git clone https://github.com/leandrosantiag/ApiMatch
 cd ApiMatch
-docker-compose up -d
+docker-compose up --build
 ```
