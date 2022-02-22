@@ -18,3 +18,13 @@ git clone https://github.com/leandrosantiag/ApiMatch
 cd ApiMatch
 docker-compose up --build
 ```
+
+E mais um comando para montar o seu banco de dados.
+
+```
+docker-compose exec php bin/console doctrine:migrations:migrate
+```
+
+### ⚙️ Consumindo API
+
+Registre um novo usuario para usar a API.
