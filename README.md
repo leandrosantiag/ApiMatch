@@ -59,9 +59,9 @@ HEADER application/json
 
 HEADER authorization
 
-`Observações para cadastro de alunos:`
+*Observações para cadastro de alunos:*
 
-`É obrigatorio o aluno tenha 16 anos ou mais`
+*É obrigatorio o aluno tenha 16 anos ou mais*
 
 
 | URI path    | Resource class  | HTTP methods | Notes                                       |
@@ -77,15 +77,15 @@ HEADER application/json
 
 HEADER authorization
 
-`Observações para cadastro de matrículas:`
+*Observações para cadastro de matrículas:*
 
-`É obrigatorio o uso de um curso e aluno existentes no banco`
+*É obrigatorio o uso de um curso e aluno existentes no banco*
 
-`Só são permitidas matrículas em cursos que não estejam em andamento ou encerrado` **{"status": 1}**
+*Só são permitidas matrículas em cursos que não estejam em andamento ou encerrado **{"status": 1}** *
 
-`Só são permitidas matrículas de alunos ativos` **{"status": 1}**
+*Só são permitidas matrículas de alunos ativos **{"status": 1}** *
 
-`Cada curso é limitado a 10 matrículas`
+*Cada curso é limitado a 10 matrículas*
 
 
 | URI path    | Resource class  | HTTP methods | Notes                                       |
