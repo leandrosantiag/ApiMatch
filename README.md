@@ -59,6 +59,11 @@ HEADER application/json
 
 HEADER authorization
 
+`Observações para cadastro de alunos:`
+
+`É obrigatorio o aluno tenha 16 anos ou mais`
+
+
 | URI path    | Resource class  | HTTP methods | Notes                                       |
 |-------------|-----------------|--------------|---------------------------------------------|
 | /api/alunos       | AlunosController | GET          | Listar todos os alunos                            |
@@ -72,7 +77,7 @@ HEADER application/json
 
 HEADER authorization
 
-`Observações:`
+`Observações para cadastro de matrículas:`
 
 `É obrigatorio o uso de um curso e aluno existentes no banco`
 
