@@ -32,14 +32,7 @@ docker-compose exec php bin/console doctrine:migrations:migrate
 #### Autenticação
 HEADER application/json
 
-Crie um usuario para acessar a api. Exemplo de json:
-
-```
-{
-  "username": "match", 
-  "password": "olaapi"
-}
-```
+Crie um usuário e depois faça o login para obter um token de acesso.
 
 | URI path       | Resource class           | HTTP methods | Notes                                                                                                |
 |----------------|--------------------------|--------------|------------------------------------------------------------------------------------------------------|
