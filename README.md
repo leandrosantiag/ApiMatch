@@ -4,7 +4,7 @@ Api para gstão de matriculas, cursos, alunos e usuários.
 
 ## 📋 Pré-requisitos
 
-Você precisa ter instalado o Git e Docker compose
+Você precisa ter instalado o Git e o Docker compose
 * [Instalar Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Instalar Docker compose](https://docs.docker.com/compose/install/)
 
