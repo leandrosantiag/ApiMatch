@@ -9,7 +9,7 @@ Você precisa ter instalado o Git e o Docker compose
 * [Instalar Docker compose](https://docs.docker.com/compose/install/)
 
 
-## 🔧 Instalação
+## 🔧 Configuração
 
 Faça uma cópia do projeto e acesse a pasta de destino com o comando abaixo.
 
@@ -28,6 +28,7 @@ docker-compose exec php bin/console doctrine:migrations:migrate
 
 ## ⚙️ Consumindo a API
 
+Url de interação: `http://localhost:8080`
 
 ### Autenticação
 HEADER application/json
