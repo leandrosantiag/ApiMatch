@@ -41,6 +41,7 @@ Crie um usuário e depois faça o login para obter um token de acesso.
 
 #### Cursos
 HEADER application/json
+
 HEADER authorization
 
 O token de autorização deve ser fornecido com a ação desejada. Exemplo: `Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9....`
@@ -55,6 +56,7 @@ O token de autorização deve ser fornecido com a ação desejada. Exemplo: `Aut
 
 #### Alunos
 HEADER application/json
+
 HEADER authorization
 
 | URI path    | Resource class  | HTTP methods | Notes                                       |
