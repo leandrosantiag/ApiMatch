@@ -72,7 +72,7 @@ HEADER application/json
 
 HEADER authorization
 
-`Observações:
+```Observações:
 
 É obrigatorio o uso de um curso e aluno existentes no banco
 
@@ -81,7 +81,7 @@ Só são permitidas matrículas em cursos que não estejam em andamento ou encer
 Só são permitidas matrículas de alunos ativos **{"status": 1}**
 
 Cada curso é limitado a 10 matrículas
-`
+```
 
 | URI path    | Resource class  | HTTP methods | Notes                                       |
 |-------------|-----------------|--------------|---------------------------------------------|
