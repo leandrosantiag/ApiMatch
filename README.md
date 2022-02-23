@@ -1,4 +1,4 @@
-# Api Match - JWT - Symfony 6 - Docker
+# Symfony 6 JWT - REST API | Docker
 
 Api para gstão de matriculas, cursos, alunos e usuários.
 
