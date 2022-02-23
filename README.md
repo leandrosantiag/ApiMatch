@@ -11,7 +11,7 @@ Você precisa ter instalado o Git e o Docker compose
 
 ## 🔧 Instalação
 
-Faça uma cópia e acesse a pasta do projeto o comando abaixo.
+Faça uma cópia do projeto e acesse a pasta de destino com o comando abaixo.
 
 ```
 git clone https://github.com/leandrosantiag/ApiMatch
