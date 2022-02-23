@@ -51,7 +51,7 @@ O token de autorização deve ser fornecido com a ação desejada. Exemplo: `Aut
 | /api/cursos       | CursosController | GET          | Listar todos os cursos                            |
 | /api/cursos/{id}  | CursosController | GET          | Obter um curso específico pela Id      |
 | /api/cursos/      | CursosController | POST         | Criar um novo curso {"titulo": "string", "descricao": "string", "data_inicio": "date", "data_fim": "date", "status": "int"}     |
-| /api/cursos/{id}  | CursosController | PUT          | Alterar um curso específica pela Id {"titulo": "string", "descricao": "string", "data_inicio": "date", "data_fim": "date", "status": "int"} |
+| /api/cursos/{id}  | CursosController | PUT          | Alterar um curso específico pela Id {"titulo": "string", "descricao": "string", "data_inicio": "date", "data_fim": "date", "status": "int"} |
 | /api/cursos/{id}  | CursosController | DELETE       | Remover um curso específico pela Id   |
 
 ### Alunos
@@ -64,7 +64,7 @@ HEADER authorization
 | /api/alunos       | AlunosController | GET          | Listar todos os alunos                            |
 | /api/alunos/{id}  | AlunosController | GET          | Obter um aluno específico pela Id      |
 | /api/alunos/      | AlunosController | POST         | Criar um novo aluno {"nome": "string", "email": "string", "data_nascimento": "date", "status": "int"}     |
-| /api/alunos/{id}  | AlunosController | PUT          | Alterar um aluno específica pela Id {"nome": "string", "email": "string", "data_nascimento": "date", "status": "int"} |
+| /api/alunos/{id}  | AlunosController | PUT          | Alterar um aluno específico pela Id {"nome": "string", "email": "string", "data_nascimento": "date", "status": "int"} |
 | /api/alunos/{id}  | AlunosController | DELETE       | Remover um aluno específico pela Id   |
 
 *Observações para cadastro de alunos:*
