@@ -69,6 +69,7 @@ HEADER authorization
 
 #### Matrículas
 HEADER application/json
+
 HEADER authorization
 
 | URI path    | Resource class  | HTTP methods | Notes                                       |
