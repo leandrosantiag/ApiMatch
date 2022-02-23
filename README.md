@@ -69,7 +69,7 @@ HEADER authorization
 
 *Observações para cadastro de alunos:*
 
-*É obrigatorio o aluno tenha 16 anos ou mais*
+*É obrigatorio que o aluno tenha 16 anos ou mais*
 
 ### Matrículas
 HEADER application/json
