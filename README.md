@@ -2,14 +2,14 @@
 
 Api para gstão de matriculas, cursos, alunos e usuários.
 
-### 📋 Pré-requisitos
+## 📋 Pré-requisitos
 
 Você precisa ter instalado o Git e Docker compose
 * [Instalar Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Instalar Docker compose](https://docs.docker.com/compose/install/)
 
 
-### 🔧 Instalação
+## 🔧 Instalação
 
 Faça uma cópia e acesse a pasta do projeto o comando abaixo.
 
@@ -26,10 +26,10 @@ docker-compose exec php composer update
 docker-compose exec php bin/console doctrine:migrations:migrate
 ```
 
-### ⚙️ Consumindo a API
+## ⚙️ Consumindo a API
 
 
-#### Autenticação
+### Autenticação
 HEADER application/json
 
 Crie um usuário e depois faça o login para obter um token de acesso.
@@ -39,7 +39,7 @@ Crie um usuário e depois faça o login para obter um token de acesso.
 | /api/register | AuthController | POST         | {     "username": "string",     "password": "string" } |
 | /api/login    | AuthController | POST         | {    "username": "string",    "password":"string"}            
 
-#### Cursos
+### Cursos
 HEADER application/json
 
 HEADER authorization
@@ -54,15 +54,10 @@ O token de autorização deve ser fornecido com a ação desejada. Exemplo: `Aut
 | /api/cursos/{id}  | CursosController | PUT          | Alterar um curso {"titulo": "string", "descricao": "string", "data_inicio": "date", "data_fim": "date", "status": "int"} |
 | /api/cursos/{id}  | CursosController | DELETE       | Remover um curso específico pela Id   |
 
-#### Alunos
+### Alunos
 HEADER application/json
 
 HEADER authorization
-
-*Observações para cadastro de alunos:*
-
-*É obrigatorio o aluno tenha 16 anos ou mais*
-
 
 | URI path    | Resource class  | HTTP methods | Notes                                       |
 |-------------|-----------------|--------------|---------------------------------------------|
@@ -72,10 +67,23 @@ HEADER authorization
 | /api/alunos/{id}  | AlunosController | PUT          | Alterar um aluno {"nome": "string", "email": "string", "data_nascimento": "date", "status": "int"} |
 | /api/alunos/{id}  | AlunosController | DELETE       | Remover um aluno específico pela Id   |
 
-#### Matrículas
+*Observações para cadastro de alunos:*
+
+*É obrigatorio o aluno tenha 16 anos ou mais*
+
+### Matrículas
 HEADER application/json
 
 HEADER authorization
+
+| URI path    | Resource class  | HTTP methods | Notes                                       |
+|-------------|-----------------|--------------|---------------------------------------------|
+| /api/matriculas       | MatriculasController | GET          | Listar todas as matrículas                            |
+| /api/matriculas/{id}  | MatriculasController | GET          | Obter uma matrícula específica pela Id      |
+| /api/matriculas/      | MatriculasController | POST         | Criar uma nova matrícula {"curso": "int", "aluno": "int"}     |
+| /api/matriculas/{id}  | MatriculasController | PUT          | Alterar uma matrícula {"curso": "int", "aluno": "int"}  |
+| /api/matriculas/{id}  | MatriculasController | DELETE       | Remover uma matrícula específica pela Id   |
+
 
 *Observações para cadastro de matrículas:*
 
@@ -86,13 +94,4 @@ HEADER authorization
 *Só são permitidas matrículas de alunos ativos* **{"status": 1}**
 
 *Cada curso é limitado a 10 matrículas*
-
-
-| URI path    | Resource class  | HTTP methods | Notes                                       |
-|-------------|-----------------|--------------|---------------------------------------------|
-| /api/matriculas       | MatriculasController | GET          | Listar todas as matrículas                            |
-| /api/matriculas/{id}  | MatriculasController | GET          | Obter uma matrícula específica pela Id      |
-| /api/matriculas/      | MatriculasController | POST         | Criar uma nova matrícula {"curso": "int", "aluno": "int"}     |
-| /api/matriculas/{id}  | MatriculasController | PUT          | Alterar uma matrícula {"curso": "int", "aluno": "int"}  |
-| /api/matriculas/{id}  | MatriculasController | DELETE       | Remover uma matrícula específica pela Id   |
 
