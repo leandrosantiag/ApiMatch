@@ -16,7 +16,7 @@ Faça uma cópia do projeto e execute o container usando com os comandos abaixo.
 ```
 git clone https://github.com/leandrosantiag/ApiMatch
 cd ApiMatch
-docker-compose up --build
+docker-compose up -d
 ```
 
 E mais um comando para montar o seu banco de dados.
@@ -28,3 +28,11 @@ docker-compose exec php bin/console doctrine:migrations:migrate
 ### ⚙️ Consumindo API
 
 Registre um novo usuario para usar a API.
+
+#### Authentication
+HEADER application/json
+
+| URI path       | Resource class           | HTTP methods | Notes                                                                                                |
+|----------------|--------------------------|--------------|------------------------------------------------------------------------------------------------------|
+| /api/register | AuthController | POST         | {     "username": "string",     "password": "string" } |
+| /api/login    | AuthController | POST         | {    "username": "string",    "password":"string"}            
